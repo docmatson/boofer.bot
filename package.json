@@ -1,0 +1,11 @@
+{
+  "name": "boofer.bot",
+  "version": "0.0.1",
+  "description": "Weed Based bot for discord",
+  "main": "bot.js",
+  "author": "Docmatson",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}

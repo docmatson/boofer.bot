@@ -8,14 +8,14 @@ client.commands = new Discord.Collection();
 fs.readdir('./cmds/', (err, files) => {
 	if(err) console.error(err);
 
-	let jsfiles = files.filter(f => f.split('.').pop() === 'js');
-	if(jsfiles.length <= 0) {
+	let jsFiles = files.filter(f => f.split('.').pop() === 'js');
+	if(jsFiles.length <= 0) {
 		console.log("No commands to load!");
 		return;
 	}
-	console.log(`Loading ${jsfiles.length} commands!`);
+	console.log(`Loading ${jsFiles.length} commands!`);
 
-	jsfiles.forEach((f, i) => {
+	jsFiles.forEach((f, i) => {
 		let props = require(`./cmds/${f}`);
 		console.log(`${i + 1}: ${f} loaded`)
 		client.commands.set(props.help.name, props);
@@ -24,7 +24,7 @@ fs.readdir('./cmds/', (err, files) => {
 
 client.once('ready', () => {
 	console.log(`${client.user.tag} is Online!`);
-	client.user.setActivity("Boofing fat dabs!");
+	client.user.setActivity("with some Weed");
 });
 
 client.on('message', async msg => {

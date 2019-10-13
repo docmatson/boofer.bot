@@ -21,7 +21,7 @@ module.exports.run = async (client, msg, args) => {
 
 			.setThumbnail(mentionMember.user.avatarURL)
 
-			msg.channel.send(mentionInfo);
+		msg.channel.send(mentionInfo);
 	}
 };
 

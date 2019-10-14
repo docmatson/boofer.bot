@@ -18,7 +18,7 @@ module.exports.run = async (client, msg, args) => {
 				return jimp.loadFont(jimp.FONT_SANS_32_BLACK);
 			})
 			.then(function (font){
-				loadedImg.print(font, 10, 130, imgCaption, 600)
+				loadedImg.print(font, 10, 130, imgCaption, 625)
 						 .write("./img/snoop_edited.png");
 			})
 			.catch(function (err){
@@ -37,7 +37,7 @@ module.exports.run = async (client, msg, args) => {
 
 	writeImg();
 
-	setTimeout(sendImg, 5000);
+	setTimeout(sendImg, 2500);
 };
 
 module.exports.help = {

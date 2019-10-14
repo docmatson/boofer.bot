@@ -23,8 +23,8 @@ module.exports.run = async (client, msg, args) => {
 
 		msg.channel.send(mentionInfo);
 	}
-};
+}
 
 module.exports.help = {
 	name: "userinfo"
-};
+}

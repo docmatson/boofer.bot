@@ -3,7 +3,7 @@ var jimp = require('jimp');
 var fs = require('fs');
 
 module.exports.run = async (client, msg, args) => {
-	var fileName = './img/tweet_snoop.png';
+	var fileName = './img/tweet/tweet_snoop.png';
 	var imgCaption = args.join(" ");
 	var loadedImg;
 
@@ -19,7 +19,7 @@ module.exports.run = async (client, msg, args) => {
 			})
 			.then(function (font){
 				loadedImg.print(font, 10, 130, imgCaption, 625)
-						 .write("./img/snoop_edited.png");
+						 .write("./img/tweet/snoop_edited.png");
 			})
 			.catch(function (err){
 				console.error(err);
@@ -29,7 +29,7 @@ module.exports.run = async (client, msg, args) => {
 	function sendImg() {
 		msg.channel.send({files: [
 			{
-				attachment: "./img/snoop_edited.png",
+				attachment: "./img/tweet/snoop_edited.png",
 				name: "snoop.png"
 			}
 		]});

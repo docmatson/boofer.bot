@@ -19,7 +19,7 @@ module.exports.run = async (client, msg, args) => {
 			let result = jsFiles.forEach((f, i) => {
 				let props = require(`./${f}`);
 				namelist = props.help.name;
-				helpembed.addField("Name:", namelist, true)
+				helpembed.addField("~~~", namelist, true)
 				
 			});
 			

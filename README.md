@@ -1,5 +1,5 @@
 # boofer.bot
-A weed themed Discord bot for my homies
+A Discord bot for my homies
 
 This code will not work unless you know how i have my ./config.json file setup.
 

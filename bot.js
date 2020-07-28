@@ -31,7 +31,9 @@ client.on('message', async msg => {
 	if(msg.author.bot) return;
 	if(msg.channel.type === 'dm') return;
 
-	let msgArray = msg.content.split(/\s+/g);
+	tmsg = msg.content.toLowerCase();
+
+	let msgArray = tmsg.split(/\s+/g);
 	let command = msgArray[0];
 	let args = msgArray.slice(1);
 
